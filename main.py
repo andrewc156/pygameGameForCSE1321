@@ -1,7 +1,4 @@
 import pygame
-from entity import Slime
-from utilities import Text, Level
-from settings import level_map
 
 pygame.init()
 screen = pygame.display.set_mode(
