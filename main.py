@@ -27,7 +27,8 @@ while running:
             sys.exit(0)
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
-                mc.jump()
+                if mc.alive:
+                    mc.jump()
 
     all_sprites.update(delta_time, physics)
     all_sprites.draw(screen)
@@ -37,3 +38,4 @@ while running:
     if not mc.alive:
         pygame.quit()
         sys.exit(0)
+        # change to death later
