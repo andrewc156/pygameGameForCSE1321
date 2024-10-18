@@ -22,4 +22,4 @@ class Character(pygame.sprite.Sprite):
 
     def jump(self):
         self.is_jumping = True
-        self.V_y = -400
+        self.V_y = -1500

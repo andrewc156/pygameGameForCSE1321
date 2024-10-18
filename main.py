@@ -12,7 +12,7 @@ running = True
 playing = True
 
 mc = Character(1000, 500)
-physics = Physics(gravity=3000)
+physics = Physics(gravity=7000)
 all_sprites = pygame.sprite.Group()
 all_sprites.add(mc)
 
