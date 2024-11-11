@@ -9,6 +9,7 @@ from pipes import TubePair
 from pygame.sprite import LayeredUpdates
 
 def main():
+    #sets up the game and audio mixer
     pygame.init()
     pygame.mixer.init()
     SCREEN_WIDTH = 1920
@@ -16,10 +17,11 @@ def main():
     screen = pygame.display.set_mode(
         (SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREEN | pygame.HWSURFACE | pygame.DOUBLEBUF
     )
-    pygame.display.set_caption("Flappy Bird Clone")
+    pygame.display.set_caption("Flappy Bird Game")
     clock = pygame.time.Clock()
     running = True
 
+    #saves the audio to variables
     jump_sound = pygame.mixer.Sound('assets/jump.wav')
     jump_sound.set_volume(0.5)
     fail_sound = pygame.mixer.Sound('assets/fail.wav')
@@ -53,7 +55,7 @@ def main():
 
     pause_start_time = 0
     total_pause_duration = 0
-
+    #checks to see if high_score file exists if not high_score = 0
     high_score_file = 'high_score.txt'
     if os.path.exists(high_score_file):
         with open(high_score_file, 'r') as file:
@@ -259,5 +261,4 @@ def show_game_over_screen(screen, font, current_score, high_score):
         clock.tick(60)
 
 
-if __name__ == "__main__":
-    main()
+

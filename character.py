@@ -16,8 +16,8 @@ class Character(pygame.sprite.Sprite):
         self.is_jumping = False
         self.window_height = 1080
         self.alive = True
-        self.physics = physics  # Store the physics object
-        self.jump_sound = jump_sound  # Store the jump sound
+        self.physics = physics  # Stores the physics object
+        self.jump_sound = jump_sound  # Stores the jump sound
 
     def update(self, delta_time, *args):
         self.physics.apply_gravity(delta_time, self)
@@ -26,5 +26,5 @@ class Character(pygame.sprite.Sprite):
 
     def jump(self):
         self.is_jumping = True
-        self.V_y = -800  # Adjusted jump strength
-        self.jump_sound.play()  # Play the jump sound effect
+        self.V_y = -800
+        self.jump_sound.play()  # Plays the jump sound effect
