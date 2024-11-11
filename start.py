@@ -23,7 +23,11 @@ startRect = start_button.get_rect(center =(960,540))
 startText = font.render('Click here to Start', True, (255, 255, 255))
 buttonText = startText.get_rect(center = (960,540))
 screen.blit(text,textRect)
-
+instructionsFont = pygame.font.Font('freesansbold.ttf',20)
+instructionsText = instructionsFont.render('Press SPACE to fly and avoid the pipes! Reach 10 to win!  Good Luck!', True, (0, 0, 0))
+instructionsRect = instructionsText.get_rect()
+instructionsRect.center = (960, 450)
+screen.blit(instructionsText, instructionsRect)
 
 
 

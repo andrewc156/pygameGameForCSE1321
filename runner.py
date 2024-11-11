@@ -37,7 +37,7 @@ def main():
     all_sprites = LayeredUpdates()
     pipes_group = pygame.sprite.Group()
     tube_pairs = []
-
+    #adds sprites to background
     background_elements = background.load_background(SCREEN_WIDTH, SCREEN_HEIGHT)
     all_sprites.add(background_elements['sky_sprite'])
     all_sprites.add(background_elements['ground_sprite'])
@@ -73,7 +73,7 @@ def main():
 
     victory = False
     paused = False
-
+    #code to run code
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -88,7 +88,7 @@ def main():
                         pause_start_time = pygame.time.get_ticks()
                     else:
                         running = False
-
+        #pauses
         if paused:
             show_pause_screen(screen, font)
             paused = False
@@ -146,7 +146,7 @@ def main():
         if not mc.alive:
             running = False
             fail_sound.play()
-
+    #creates the high_score file to save high score
     if int(current_score) > high_score:
         high_score = int(current_score)
         with open(high_score_file, 'w') as file:
